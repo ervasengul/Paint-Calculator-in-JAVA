@@ -1,0 +1,109 @@
+Overview
+The application consists of several classes that model different shapes (Rectangle, Sphere, Cylinder) and a Paint class to calculate the amount of paint needed to cover each shape. The shapes inherit from an abstract Shapes class, which defines common behavior such as calculating the area and providing a string representation of the shape.
+
+Features
+Shape Modeling: The application models three shapes: Rectangle, Sphere, and Cylinder.
+
+Area Calculation: Each shape class implements a method to calculate its surface area.
+
+Paint Calculation: The Paint class calculates the amount of paint required to cover a given shape based on its surface area and the paint's coverage.
+
+Polymorphism: The application uses polymorphism to handle different shapes uniformly through the Shapes abstract class.
+
+Classes
+Shapes (Abstract Class)
+Purpose: Base class for all shapes.
+
+Methods:
+
+area(): Abstract method to calculate the area of the shape.
+
+toString(): Returns a string representation of the shape.
+
+Rectangle (Extends Shapes)
+Purpose: Models a rectangular shape.
+
+Attributes:
+
+length: Length of the rectangle.
+
+width: Width of the rectangle.
+
+Methods:
+
+area(): Calculates the area of the rectangle.
+
+toString(): Returns a string representation of the rectangle.
+
+Sphere (Extends Shapes)
+Purpose: Models a spherical shape.
+
+Attributes:
+
+radius: Radius of the sphere.
+
+Methods:
+
+area(): Calculates the surface area of the sphere.
+
+toString(): Returns a string representation of the sphere.
+
+Cylinder (Extends Shapes)
+Purpose: Models a cylindrical shape.
+
+Attributes:
+
+radius: Radius of the cylinder.
+
+height: Height of the cylinder.
+
+Methods:
+
+area(): Calculates the surface area of the cylinder.
+
+toString(): Returns a string representation of the cylinder.
+
+Paint
+Purpose: Calculates the amount of paint needed to cover a shape.
+
+Attributes:
+
+coverage: Coverage of the paint in square feet per gallon.
+
+Methods:
+
+amount(Shapes shape): Calculates the amount of paint required for a given shape.
+
+PaintThings
+Purpose: Main class to demonstrate the application.
+
+Methods:
+
+main(String[] args): Creates shapes, calculates the paint required, and prints the results.
+
+Usage
+Compile the Program:
+
+bash
+Copy
+javac quiz6/*.java
+Run the Program:
+
+bash
+Copy
+java quiz6.PaintThings
+Output:
+The program will print the amount of paint needed for each shape (deck, big ball, and tank).
+
+Example
+Input:
+The program does not require user input. It uses predefined shapes and paint coverage.
+
+Output:
+Copy
+amount of paint needed for deck: 7.0
+amount of paint needed for big ball: 28.274333882308138
+amount of paint needed for tank: 25.132741228718345
+Explanation:
+The program calculates the amount of paint needed for each shape based on its surface area and the paint's coverage (100 square feet per gallon).
+
